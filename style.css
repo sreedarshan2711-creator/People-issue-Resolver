@@ -1,0 +1,26 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif;
+}
+body { background: linear-gradient(to right, #dbeafe, #eff6ff); color: #1f2937; }
+header { background: #1d4ed8; color: white; padding: 20px; text-align: center; }
+nav a { color: white; margin: 0 12px; text-decoration: none; font-weight: bold; }
+.container { width: 90%; max-width: 1100px; margin: 30px auto; }
+.card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin-bottom: 25px; }
+form { display: flex; flex-direction: column; }
+input, textarea, select { padding: 14px; margin-bottom: 15px; border: 1px solid #cbd5e1; border-radius: 8px; }
+button { background: #2563eb; color: white; border: none; padding: 14px; border-radius: 8px; cursor: pointer; }
+button:hover { background: #1e40af; }
+.hero { text-align: center; padding: 80px 20px; }
+.hero h1 { font-size: 48px; }
+.hero p { font-size: 20px; margin: 20px 0; }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { padding: 12px; border: 1px solid #ddd; }
+.table th { background: #2563eb; color: white; }
+.status { padding: 6px 12px; border-radius: 20px; color: white; }
+.pending { background: orange; }
+.review { background: blue; }
+.resolved { background: green; }
+.rejected { background: red; }
+.success-box { text-align: center; padding: 50px; }
+.success-box .check { font-size: 70px; color: green; }
+footer { text-align: center; padding: 20px; background: #1e3a8a; color: white; margin-top: 40px; }
