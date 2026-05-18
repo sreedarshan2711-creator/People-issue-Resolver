@@ -15,11 +15,15 @@
 <div class="container">
     <div class="card">
 
+        <!-- Issue Title -->
         <input type="text" id="title" placeholder="Issue Title" required>
         <br>
 
+        <!-- Description -->
         <textarea id="description" placeholder="Describe your issue" required></textarea>
+        <br>
 
+        <!-- Complaint Category -->
         <select id="category" required>
             <option value="">Select Issue Type</option>
             <option>Road Issue</option>
@@ -29,12 +33,15 @@
         </select>
         <br>
 
+        <!-- Date -->
         <input type="date" id="date" required>
         <br>
 
+        <!-- File Upload -->
         <input type="file" id="file" required>
         <br>
 
+        <!-- Authority -->
         <select id="authority" required>
             <option value="">Select Authority</option>
             <option>Collector</option>
@@ -44,12 +51,16 @@
 
         <br><br>
 
-        <button onclick="validateComplaint()">Submit Complaint</button>
+        <!-- Submit Button -->
+        <button onclick="validateComplaint()">
+            Submit Complaint
+        </button>
 
     </div>
 </div>
 
 <script>
+
 function validateComplaint() {
 
     let title = document.getElementById("title").value;
@@ -59,16 +70,21 @@ function validateComplaint() {
     let file = document.getElementById("file").value;
     let authority = document.getElementById("authority").value;
 
-    if(title === "" || description === "" || category === "" || 
+    // Check Empty Fields
+    if(title === "" || description === "" || category === "" ||
        date === "" || file === "" || authority === "") {
 
         alert("Please fill all complaint details");
     }
     else {
+
         alert("Complaint Submitted Successfully");
-        window.location.href = "success.html";
+
+        // Redirect to Success Page
+        location.replace("success.html");
     }
 }
+
 </script>
 
 </body>
