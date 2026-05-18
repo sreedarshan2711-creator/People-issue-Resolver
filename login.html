@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,15 +16,15 @@
     <div class="card">
 
         <!-- Username / Aadhaar -->
-        <input type="text" id="username" placeholder="Username / Aadhaar" required>
+        <input type="text" placeholder="Username / Aadhaar" required>
         <br>
 
         <!-- Password -->
-        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" required>
         <br>
 
         <!-- Role Selection -->
-        <select id="role" required>
+        <select required>
             <option value="">Select Role</option>
             <option value="user">User</option>
             <option value="admin">Collector Admin</option>
@@ -33,36 +33,12 @@
         <br><br>
 
         <!-- Login Button -->
-        <button onclick="validateLogin()">
-            Login
-        </button>
+        <a href="complaint.html">
+            <button>Login</button>
+        </a>
 
     </div>
 </div>
-
-<script>
-
-function validateLogin() {
-
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
-    let role = document.getElementById("role").value;
-
-    // Check Empty Fields
-    if(username === "" || password === "" || role === "") {
-
-        alert("Please fill all details");
-    }
-    else {
-
-        alert("Login Successful");
-
-        // Redirect to Complaint Page
-        location.replace("complaint.html");
-    }
-}
-
-</script>
 
 </body>
 </html>
