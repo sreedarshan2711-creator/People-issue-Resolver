@@ -16,26 +16,46 @@
     <div class="card">
 
       <!-- Username / Aadhaar -->
-      <input type="text" placeholder="Username / Aadhaar" required>
-<br>
+      <input type="text" id="username" placeholder="Username / Aadhaar" required>
+      <br>
+
       <!-- Password -->
-      <input type="password" placeholder="Password" required>
-<br>
+      <input type="password" id="password" placeholder="Password" required>
+      <br>
+
       <!-- Role Selection -->
-      <select required>
+      <select id="role" required>
+        <option value="">Select Role</option>
         <option value="user">User</option>
         <option value="admin">Collector Admin</option>
       </select>
 
       <br><br>
 
-      <!-- Login Link -->
-      <a href="complaint.html" class="btn">
-        Login
-      </a>
+      <!-- Login Button -->
+      <button onclick="validateLogin()">Login</button>
 
     </div>
   </div>
+
+<script>
+function validateLogin() {
+
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
+    let role = document.getElementById("role").value;
+
+    if(username === "" || password === "" || role === "") {
+        alert("Please fill all details");
+    }
+    else {
+        alert("Login Successful");
+
+        // Redirect after login
+        window.location.href = "complaint.html";
+    }
+}
+</script>
 
 </body>
 </html>
