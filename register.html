@@ -15,65 +15,37 @@
     <div class="card">
 
         <!-- Full Name -->
-        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="text" placeholder="Full Name" required>
         <br>
 
         <!-- Aadhaar -->
-        <input type="text" id="aadhaar" placeholder="Aadhaar Number" required>
+        <input type="text" placeholder="Aadhaar Number" required>
         <br>
 
         <!-- Age -->
-        <input type="number" id="age" placeholder="Age" required>
+        <input type="number" placeholder="Age" required>
         <br>
 
         <!-- Address -->
-        <textarea id="address" placeholder="Address" required></textarea>
+        <textarea placeholder="Address" required></textarea>
         <br>
 
         <!-- Mobile -->
-        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <input type="tel" placeholder="Mobile Number" required>
         <br>
 
         <!-- Password -->
-        <input type="password" id="password" placeholder="Password" required>
+        <input type="password" placeholder="Password" required>
 
         <br><br>
 
         <!-- Register Button -->
-        <button onclick="validateForm()">
-            Register
-        </button>
+        <a href="login.html">
+            <button>Register</button>
+        </a>
 
     </div>
 </div>
-
-<script>
-
-function validateForm() {
-
-    let name = document.getElementById("name").value;
-    let aadhaar = document.getElementById("aadhaar").value;
-    let age = document.getElementById("age").value;
-    let address = document.getElementById("address").value;
-    let mobile = document.getElementById("mobile").value;
-    let password = document.getElementById("password").value;
-
-    // Check Empty Fields
-    if(name === "" || aadhaar === "" || age === "" ||
-       address === "" || mobile === "" || password === "") {
-
-        alert("Please fill all details");
-    }
-    else {
-
-        alert("Registration Successful");
-
-        // Redirect to Login Page
-        location.replace("login.html");
-    }
-}
-
-</script>
 
 </body>
 </html>
