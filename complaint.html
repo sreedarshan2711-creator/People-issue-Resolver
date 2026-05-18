@@ -16,15 +16,15 @@
     <div class="card">
 
         <!-- Issue Title -->
-        <input type="text" id="title" placeholder="Issue Title" required>
+        <input type="text" placeholder="Issue Title" required>
         <br>
 
         <!-- Description -->
-        <textarea id="description" placeholder="Describe your issue" required></textarea>
+        <textarea placeholder="Describe your issue" required></textarea>
         <br>
 
         <!-- Complaint Category -->
-        <select id="category" required>
+        <select required>
             <option value="">Select Issue Type</option>
             <option>Road Issue</option>
             <option>Water Problem</option>
@@ -34,15 +34,15 @@
         <br>
 
         <!-- Date -->
-        <input type="date" id="date" required>
+        <input type="date" required>
         <br>
 
         <!-- File Upload -->
-        <input type="file" id="file" required>
+        <input type="file" required>
         <br>
 
         <!-- Authority -->
-        <select id="authority" required>
+        <select required>
             <option value="">Select Authority</option>
             <option>Collector</option>
             <option>MLA</option>
@@ -52,40 +52,12 @@
         <br><br>
 
         <!-- Submit Button -->
-        <button onclick="validateComplaint()">
-            Submit Complaint
-        </button>
+        <a href="success.html">
+            <button>Submit Complaint</button>
+        </a>
 
     </div>
 </div>
-
-<script>
-
-function validateComplaint() {
-
-    let title = document.getElementById("title").value;
-    let description = document.getElementById("description").value;
-    let category = document.getElementById("category").value;
-    let date = document.getElementById("date").value;
-    let file = document.getElementById("file").value;
-    let authority = document.getElementById("authority").value;
-
-    // Check Empty Fields
-    if(title === "" || description === "" || category === "" ||
-       date === "" || file === "" || authority === "") {
-
-        alert("Please fill all complaint details");
-    }
-    else {
-
-        alert("Complaint Submitted Successfully");
-
-        // Redirect to Success Page
-        location.replace("success.html");
-    }
-}
-
-</script>
 
 </body>
 </html>
