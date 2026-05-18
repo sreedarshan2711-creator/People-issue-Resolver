@@ -14,26 +14,51 @@
 <div class="container">
     <div class="card">
 
-        <input type="text" placeholder="Full Name" required>
-       <br>
-        <input type="text" placeholder="Aadhaar Number" required>
-<br>
-        <input type="number" placeholder="Age" required>
-<br>
-        <textarea placeholder="Address" required></textarea>
-<br>
-        <input type="tel" placeholder="Mobile Number" required>
-<br>
-        <input type="password" placeholder="Password" required>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <br>
+
+        <input type="text" id="aadhaar" placeholder="Aadhaar Number" required>
+        <br>
+
+        <input type="number" id="age" placeholder="Age" required>
+        <br>
+
+        <textarea id="address" placeholder="Address" required></textarea>
+        <br>
+
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+        <br>
+
+        <input type="password" id="password" placeholder="Password" required>
 
         <br><br>
 
-        <a href="login.html">
-            <button>Register</button>
-        </a>
+        <button onclick="validateForm()">Register</button>
 
     </div>
 </div>
+
+<script>
+function validateForm() {
+
+    let name = document.getElementById("name").value;
+    let aadhaar = document.getElementById("aadhaar").value;
+    let age = document.getElementById("age").value;
+    let address = document.getElementById("address").value;
+    let mobile = document.getElementById("mobile").value;
+    let password = document.getElementById("password").value;
+
+    if(name === "" || aadhaar === "" || age === "" || 
+       address === "" || mobile === "" || password === "") {
+
+        alert("Please fill all details");
+    }
+    else {
+        alert("Registration Successful");
+        window.location.href = "login.html";
+    }
+}
+</script>
 
 </body>
 </html>
