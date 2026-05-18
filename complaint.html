@@ -15,22 +15,28 @@
 <div class="container">
     <div class="card">
 
-        <input type="text" placeholder="Issue Title" required>
-<br>
-        <textarea placeholder="Describe your issue" required></textarea>
+        <input type="text" id="title" placeholder="Issue Title" required>
+        <br>
 
-        <select>
+        <textarea id="description" placeholder="Describe your issue" required></textarea>
+
+        <select id="category" required>
+            <option value="">Select Issue Type</option>
             <option>Road Issue</option>
             <option>Water Problem</option>
             <option>Electricity</option>
             <option>Sanitation</option>
         </select>
-<br>
-        <input type="date" required>
-<br>
-        <input type="file" required>
-<br>
-        <select>
+        <br>
+
+        <input type="date" id="date" required>
+        <br>
+
+        <input type="file" id="file" required>
+        <br>
+
+        <select id="authority" required>
+            <option value="">Select Authority</option>
             <option>Collector</option>
             <option>MLA</option>
             <option>Councillor</option>
@@ -38,12 +44,32 @@
 
         <br><br>
 
-        <a href="success.html" class="btn">
-            Submit Complaint
-        </a>
+        <button onclick="validateComplaint()">Submit Complaint</button>
 
     </div>
 </div>
+
+<script>
+function validateComplaint() {
+
+    let title = document.getElementById("title").value;
+    let description = document.getElementById("description").value;
+    let category = document.getElementById("category").value;
+    let date = document.getElementById("date").value;
+    let file = document.getElementById("file").value;
+    let authority = document.getElementById("authority").value;
+
+    if(title === "" || description === "" || category === "" || 
+       date === "" || file === "" || authority === "") {
+
+        alert("Please fill all complaint details");
+    }
+    else {
+        alert("Complaint Submitted Successfully");
+        window.location.href = "success.html";
+    }
+}
+</script>
 
 </body>
 </html>
